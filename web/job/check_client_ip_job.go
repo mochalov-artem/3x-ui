@@ -8,7 +8,7 @@ import (
 	"os"
 	"os/exec"
 	"regexp"
-	"sort"
+	//"sort"
 	"strings"
 	"time"
 
@@ -151,7 +151,7 @@ func (j *CheckClientIpJob) processLogFile() bool {
 
 	for clientEmail, ips := range InboundClientIps {
 		inboundClientIps, err := j.getInboundClientIps(clientEmail)
-		sort.Strings(ips)
+		//sort.Strings(ips)
 		if err != nil {
 			j.addInboundClientIps(clientEmail, ips)
 		} else {
